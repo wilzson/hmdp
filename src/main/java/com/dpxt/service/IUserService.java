@@ -1,7 +1,11 @@
 package com.dpxt.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.dpxt.dto.LoginFormDTO;
+import com.dpxt.dto.Result;
 import com.dpxt.entity.User;
+
+import javax.servlet.http.HttpSession;
 
 /**
  * <p>
@@ -13,4 +17,7 @@ import com.dpxt.entity.User;
  */
 public interface IUserService extends IService<User> {
 
+    Result sendCode(String phone, HttpSession session);
+
+    Result login(LoginFormDTO loginForm, HttpSession session);
 }
