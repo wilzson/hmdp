@@ -1,5 +1,6 @@
 package com.dpxt.service;
 
+import com.dpxt.dto.Result;
 import com.dpxt.entity.Shop;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -13,4 +14,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IShopService extends IService<Shop> {
 
+    Result queryShopById(Long id);
+
+    Result updateShop(Shop shop);
 }
